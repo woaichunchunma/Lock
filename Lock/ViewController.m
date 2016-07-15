@@ -32,8 +32,8 @@
     self.view.backgroundColor = QSArcColor;
     
     //创建
-    CGFloat anViewH = 120;
-    AniView *aniView = [[AniView alloc] initWithFrame:CGRectMake(0, ScreenHeight - anViewH, ScreenWidth, anViewH)];
+    AniView *aniView = [[AniView alloc] initWithFrame:CGRectMake(0, ScreenHeight - 120, ScreenWidth, 120)];
+    //设置代理
     aniView.delegate = self;
     [self.view addSubview:aniView];
 }
