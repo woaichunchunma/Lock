@@ -6,9 +6,22 @@
 //  Copyright © 2016年 QS. All rights reserved.
 //
 
-#import "ViewController.h"
 
-@interface ViewController ()
+#define ScreenHeight ([[UIScreen mainScreen] bounds].size.height)
+#define ScreenWidth ([[UIScreen mainScreen] bounds].size.width)
+
+// RGB颜色
+
+#define QSColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+//随机色
+#define QSArcColor [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0]
+
+#import "ViewController.h"
+#import "UIView+Extension.h"
+#import "AniView.h"
+
+@interface ViewController ()<AniViewDelegate>
 
 @end
 
@@ -16,12 +29,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = QSArcColor;
+    
+    //创建
+    CGFloat anViewH = 120;
+    AniView *aniView = [[AniView alloc] initWithFrame:CGRectMake(0, ScreenHeight - anViewH, ScreenWidth, anViewH)];
+    aniView.delegate = self;
+    [self.view addSubview:aniView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - AniViewDelegate
+/**
+ *  代理
+ *
+ *  @param isLeft YES 左划    NO 右划
+ */
+- (void)selecet:(BOOL)isLeft {
+    NSString *str = @"左划调用";
+    if (!isLeft) {
+        str = @"右划调用";
+    }
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:str message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+    [alertView show];
 }
 
 @end
