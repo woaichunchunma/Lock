@@ -532,7 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lock/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wacc.Lock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -544,7 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lock/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wacc.Lock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -618,6 +618,7 @@
 				18E0C43E1D2CF4AC0073B775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18E0C43F1D2CF4AC0073B775 /* Build configuration list for PBXNativeTarget "LockTests" */ = {
 			isa = XCConfigurationList;
@@ -626,6 +627,7 @@
 				18E0C4411D2CF4AC0073B775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18E0C4421D2CF4AC0073B775 /* Build configuration list for PBXNativeTarget "LockUITests" */ = {
 			isa = XCConfigurationList;
@@ -634,6 +636,7 @@
 				18E0C4441D2CF4AC0073B775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
